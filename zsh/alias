@@ -1,6 +1,6 @@
 alias cp='nocorrect cp'
 alias mv='nocorrect mv'
-alias rm='nocorrect rm -I'
+alias rm='nocorrect rm'
 alias mkdir='nocorrect mkdir'
 alias gvim='gvim --remote-silent'
 alias :q='exit'

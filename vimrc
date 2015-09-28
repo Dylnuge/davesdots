@@ -235,6 +235,7 @@ if has('autocmd')
       autocmd BufNewFile,BufRead *.proto set filetype=proto
       autocmd BufNewFile,BufRead *.atomo set filetype=atomo
       autocmd BufNewFile,BufRead *.atomo setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 commentstring=--\ %s
+      autocmd BufNewFile,BufRead *.handlebars,*.hbs set filetype=html syntax=handlebars
    endif
 
    " make tab reindent in normal mode
@@ -358,6 +359,9 @@ if (&term =~ "^xterm")
    map! <C-[>[5C <C-Right>
 endif
 
+" Map <C-n> to NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 " Terminal.app does not support back color erase
 if ($TERM_PROGRAM ==# "Apple_Terminal" && $TERM_PROGRAM_VERSION <= 273)
    set t_ut=
@@ -387,5 +391,8 @@ if v:version >= 700
    " add current directory's generated tags file to available tags
    set tags+=./tags
 endif
+
+" ---- Pathogen ----
+call pathogen#infect()
 
 set t_RV=
