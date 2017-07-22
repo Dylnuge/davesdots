@@ -47,6 +47,6 @@
 	default = current
 [user]
   name = Dylan Nugent
-  email = dylan.nugent@addepar.com
+	email = dylnuge@gmail.com
 [branch]
 	autosetuprebase = always
